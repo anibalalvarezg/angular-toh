@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HeroService } from '../hero.service';
 import { Hero } from '../heroe';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -35,4 +35,5 @@ export class HeroesComponent implements OnInit {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero.id).subscribe();
   }
+
 }
